@@ -1,0 +1,87 @@
+:root {
+  --primary-text-color: #212529;
+  --primary-color: #013974;
+  --secondary-color: #2CC2E0;
+}
+
+.brand {
+  cursor: pointer;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content h1 {
+  color: var(--primary-text-color);
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.discover {
+  text-align: center;
+}
+
+.apphome {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #2cc2e0, #00b4e0, #00a5df, #0096dc, #0086d6, #077acb, #0f6ec0, #1562b4, #1157a4, #0c4d93, #064383, #013974);
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  background-color: #d6a000;
+  height: 190px;
+  padding: 20px;
+}
+
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.profile-details input { 
+  padding: 5px; 
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.profile-details form { 
+  margin-top: 100px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.profile-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 200px;
+}
+
+
