@@ -7,18 +7,13 @@ export const listProducts = () => {
 }
 
 export const getProductsBySection = (section) => {
-    return axios.get(`${REST_API_BASE_URL}/section`, {
-        params: {
-            section: section
-        }
-    });
+    return axios.get(`${REST_API_BASE_URL}/section/${section}`);
 }
 
 export const getProductsByCategorySection = (category, section) => {
-    return axios.get(`${REST_API_BASE_URL}/category`, {
-        params: {
-            category: category,
-            section: section
-        }
-    });
+    return axios.get(`${REST_API_BASE_URL}/categorysection/${section}/${category}`);
+}
+
+export const getProductsByCategory = (category) => {
+    return axios.get(`${REST_API_BASE_URL}/category/${category}`);
 }
