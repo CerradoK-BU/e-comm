@@ -21,9 +21,9 @@ function App() {
         <Routes> 
           <Route path='/shop' element={<HomePage/>}></Route>
           <Route path='/collections' element={<Collections/>}></Route>
-          <Route path='/section/:section' element={<ProductSection />} />
-          <Route path='/categorysection/:section/:category' element={<Category />} />
-          <Route path='/category/:category' element={<FootwearAccessories />} />
+          <Route path='/section' element={<ProductSection />} />
+          <Route path='/categorysection' element={<Category />} />
+          <Route path='/category' element={<FootwearAccessories />} />
           <Route path='/payment' element={<Payment/>}></Route>
           <Route path='/cart' element={<Cart />} />
           <Route path='/favorites' element={<Favorite/>}></Route>

@@ -33,27 +33,27 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown menuVariant='dark' className='dropdowns' title="WOMEN'S" id="basic-nav-dropdown">
-              <NavDropdown.Item href={`/categorysection/women/tops`}>TOPS</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/women/bottoms`}>BOTTOMS</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/women/dress`}>DRESS</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/women/footwear`}>FOOTWEAR</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/women/accessories`}>ACCESSORIES</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/women/others`}>OTHERS</NavDropdown.Item>
-              <NavDropdown.Item href="/section/women">ALL ITEMS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=women&category=tops`}>TOPS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=women&category=bottoms`}>BOTTOMS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=women&category=dress`}>DRESS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=women&category=footwear`}>FOOTWEAR</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=women&category=accessories`}>ACCESSORIES</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=women&category=others`}>OTHERS</NavDropdown.Item>
+              <NavDropdown.Item href="/section?section=women">ALL ITEMS</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown menuVariant='dark' className='dropdowns' title="MEN'S" id="basic-nav-dropdown">
-              <NavDropdown.Item href={`/categorysection/men/tops`}>TOPS</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/men/bottoms`}>BOTTOMS</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/men/footwear`}>FOOTWEAR</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/men/accessories`}>ACCESSORIES</NavDropdown.Item>
-              <NavDropdown.Item href={`/categorysection/men/others`}>OTHERS</NavDropdown.Item>
-              <NavDropdown.Item href="/section/men">ALL ITEMS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=men&category=tops`}>TOPS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=men&category=bottoms`}>BOTTOMS</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=men&category=footwear`}>FOOTWEAR</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=men&category=accessories`}>ACCESSORIES</NavDropdown.Item>
+              <NavDropdown.Item href={`/categorysection?section=men&category=others`}>OTHERS</NavDropdown.Item>
+              <NavDropdown.Item href="/section?section=men">ALL ITEMS</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href={`/category/accessories`}>ALL ACCESSORIES</Nav.Link>
+            <Nav.Link href={`/category?category=accessories`}>ALL ACCESSORIES</Nav.Link>
 
-            <Nav.Link href={`/category/footwear`}>ALL FOOTWEAR</Nav.Link>
+            <Nav.Link href={`/category?category=footwear`}>ALL FOOTWEAR</Nav.Link>
             
             <Nav.Link>DEALS</Nav.Link>
           </Nav>

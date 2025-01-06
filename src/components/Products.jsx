@@ -1,29 +1,34 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { getProductsBySection } from '../service/productService';
 import Button from './Button';
 import { CartContext } from '../context/cart';
 
 const ITEMS_PER_PAGE = 9;
 
-const Products = () => {
-    const { section } = useParams();
+const ProductSection = () => {
+    const location = useLocation();
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const { addToCart, addToFavorites } = useContext(CartContext);
 
+    const queryParams = new URLSearchParams(location.search);
+    const section = queryParams.get('section');
+
     useEffect(() => {
         const fetchProducts = async () => {
-            try {
-                const response = await getProductsBySection(section);
-                const data = response.data;
-                if (Array.isArray(data)) {
-                    setProducts(data);
-                } else {
-                    setProducts([data]);
+            if (section) {
+                try {
+                    const response = await getProductsBySection(section);
+                    const data = response.data;
+                    if (Array.isArray(data)) {
+                        setProducts(data);
+                    } else {
+                        setProducts([data]);
+                    }
+                } catch (error) {
+                    console.error('Error fetching the products:', error);
                 }
-            } catch (error) {
-                console.error('Error fetching the products:', error);
             }
         };
 
@@ -33,7 +38,6 @@ const Products = () => {
     const indexOfLastProduct = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstProduct = indexOfLastProduct - ITEMS_PER_PAGE;
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-
     const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
 
     const handlePageChange = (pageNumber) => {
@@ -65,6 +69,8 @@ const Products = () => {
                     </div>
                 ))}
             </div>
+
+            {/* Pagination Controls */}
             <div className="d-flex justify-content-center">
                 <nav>
                     <ul className="pagination">
@@ -82,4 +88,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default ProductSection;

@@ -7,13 +7,14 @@ export const listProducts = () => {
 }
 
 export const getProductsBySection = (section) => {
-    return axios.get(`${REST_API_BASE_URL}/section/${section}`);
+    return axios.get(`${REST_API_BASE_URL}/section?section=${section}`);
 }
 
 export const getProductsByCategorySection = (category, section) => {
-    return axios.get(`${REST_API_BASE_URL}/categorysection/${section}/${category}`);
+    return axios.get(`${REST_API_BASE_URL}/categorysection?section=${section}&category=${category}`);
 }
 
+
 export const getProductsByCategory = (category) => {
-    return axios.get(`${REST_API_BASE_URL}/category/${category}`);
+    return axios.get(`${REST_API_BASE_URL}/category?category=${category}`);
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { getProductsByCategory } from '../service/productService';
 import Button from './Button';
 import { CartContext } from '../context/cart';
@@ -7,10 +7,13 @@ import { CartContext } from '../context/cart';
 const ITEMS_PER_PAGE = 6; 
 
 const FootwearAccessories = () => {
-    const { category } = useParams();
+    const location = useLocation();
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const { addToCart, addToFavorites } = useContext(CartContext);
+    
+    const queryParams = new URLSearchParams(location.search);
+    const category = queryParams.get('category');
 
     useEffect(() => {
         const fetchProducts = async () => {
